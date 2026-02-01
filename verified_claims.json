@@ -1,0 +1,389 @@
+{
+  "timestamp": "2026-02-01T22:54:16",
+  "total_claims": 12,
+  "summary": {
+    "verified": 4,
+    "false": 3,
+    "partially_true": 0,
+    "ambiguous": 5,
+    "unverifiable": 0
+  },
+  "total_sources_checked": 30,
+  "overall_trust_score": 57.1,
+  "processing_time": 80.16,
+  "results": [
+    {
+      "claim": "Albert Einstein is widely regarded as one of the most influential scientists of the twentieth century.",
+      "status": "ambiguous",
+      "confidence_score": 0,
+      "correction": null,
+      "explanation": "Contains vague terms: most. Cannot verify.",
+      "ambiguous_words": [
+        "most"
+      ],
+      "sources": [],
+      "key_facts": [],
+      "processing_time": 0.0
+    },
+    {
+      "claim": "He published the theory of general relativity in 1915.",
+      "status": "verified",
+      "confidence_score": 93,
+      "correction": null,
+      "explanation": "Based on 6 sources",
+      "key_facts": [
+        "On November 25, 1915, Einstein submitted one of the most remarkable scientific papers of the twentieth century to the Prussian Academy of Sciences in Berlin.",
+        "Einstein’s General Theory of Relativity presented the final form of what are called the Einstein Equations, the field equations of gravity which underpin Einstein’s theory."
+      ],
+      "sources": [
+        {
+          "url": "https://press.princeton.edu/ideas/was-einstein-the-first-to-discover-general-relativity",
+          "title": "Was Einstein the First to Discover General Relativity? | Princeton University Pr",
+          "domain": "press.princeton.edu",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://www.britannica.com/story/how-albert-einstein-developed-the-theory-of-general-relativity",
+          "title": "How Albert Einstein Developed the Theory of General Relativity | Britannica",
+          "domain": "britannica.com",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/General_relativity",
+          "title": "General relativity - Wikipedia",
+          "domain": "en.wikipedia.org",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://www.cfa.harvard.edu/research/science-field/einsteins-theory-gravitation",
+          "title": "Einstein's Theory of Gravitation | Center for Astrophysics | Harvard & Smithsoni",
+          "domain": "cfa.harvard.edu",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://www.space.com/17661-theory-general-relativity.html",
+          "title": "What is the theory of general relativity? Understanding Einstein's space-time re",
+          "domain": "space.com",
+          "credibility": "Unverified Source",
+          "score": 30
+        }
+      ],
+      "sources_checked": 6,
+      "avg_source_credibility": 76.7,
+      "processing_time": 9.77
+    },
+    {
+      "claim": "The award citation focused on a different contribution.",
+      "status": "false",
+      "confidence_score": 70,
+      "correction": "The award citation should accurately reflect the individual's achievements and include distinctive, creative, and accessible language.",
+      "explanation": "Based on 4 sources",
+      "key_facts": [
+        "Draft citations should be between 175 and 250 words.",
+        "Citations will be printed in this year's program booklet with edits for university style."
+      ],
+      "sources": [
+        {
+          "url": "https://provost.wayne.edu/academic-personnel/recognition/citation-writing-tips",
+          "title": "Tips for writing draft award citations  - Wayne State University",
+          "domain": "provost.wayne.edu",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://matterapp.com/blog/team-member-nomination-examples",
+          "title": "47+ Team Member Nomination Examples That Work [2026 Guide]",
+          "domain": "matterapp.com",
+          "credibility": "Unverified Source",
+          "score": 30
+        },
+        {
+          "url": "https://www.armywriter.com/achievement-medal-citation.htm",
+          "title": "Army Achievement Medal Citation Examples",
+          "domain": "armywriter.com",
+          "credibility": "Unverified Source",
+          "score": 30
+        },
+        {
+          "url": "https://www.awards.com/articles/appreciation-award-wording-examples",
+          "title": "24 Appreciation Award Wording Examples and Ideas | Awards.com",
+          "domain": "awards.com",
+          "credibility": "Unverified Source",
+          "score": 30
+        }
+      ],
+      "sources_checked": 4,
+      "avg_source_credibility": 47.5,
+      "processing_time": 10.87
+    },
+    {
+      "claim": "The Amazon River is often described as one of the longest rivers in the world.",
+      "status": "ambiguous",
+      "confidence_score": 0,
+      "correction": null,
+      "explanation": "Contains vague terms: often. Cannot verify.",
+      "ambiguous_words": [
+        "often"
+      ],
+      "sources": [],
+      "key_facts": [],
+      "processing_time": 0.0
+    },
+    {
+      "claim": "It is frequently claimed that the Amazon is the longest river on Earth, surpassing the Nile in total length.",
+      "status": "false",
+      "confidence_score": 86,
+      "correction": "The Amazon is not the longest river on Earth; it is second in length only to the Nile.",
+      "explanation": "Based on 1 sources",
+      "key_facts": [
+        "The Amazon is second in length only to the Nile.",
+        "97 percent of all water is contained in the South America - Andes, Peaks, Glaciers region."
+      ],
+      "sources": [
+        {
+          "url": "https://www.britannica.com/search?query=It+is+frequently+claimed+that+the+Amazon+is+the+longest+river+on+Earth%2C+surpassing+the+Nile+in+total+length.",
+          "title": "Search | Britannica",
+          "domain": "britannica.com",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        }
+      ],
+      "sources_checked": 1,
+      "avg_source_credibility": 100.0,
+      "processing_time": 8.06
+    },
+    {
+      "claim": "This assertion depends on measurement methods and remains debated.",
+      "status": "verified",
+      "confidence_score": 84,
+      "correction": null,
+      "explanation": "Based on 3 sources",
+      "key_facts": [
+        "Assertion has been investigated in several disciplines.",
+        "The nature of assertion and its relation to other speech acts and linguistic phenomena have been subject to much controversy."
+      ],
+      "sources": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11804652/",
+          "title": "Discourse on measurement - PMC",
+          "domain": "pmc.ncbi.nlm.nih.gov",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://plato.stanford.edu/entries/assertion/",
+          "title": "Assertion (Stanford Encyclopedia of Philosophy)",
+          "domain": "plato.stanford.edu",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s11229-022-03580-7",
+          "title": "Science, assertion, and the common ground | Synthese | Springer Nature Link",
+          "domain": "link.springer.com",
+          "credibility": "Very Reliable",
+          "score": 85
+        }
+      ],
+      "sources_checked": 3,
+      "avg_source_credibility": 95.0,
+      "processing_time": 13.18
+    },
+    {
+      "claim": "At the same time, it is sometimes incorrectly stated that the Amazon River flows entirely within Brazil.",
+      "status": "ambiguous",
+      "confidence_score": 0,
+      "correction": null,
+      "explanation": "Contains vague terms: sometimes. Cannot verify.",
+      "ambiguous_words": [
+        "sometimes"
+      ],
+      "sources": [],
+      "key_facts": [],
+      "processing_time": 0.0
+    },
+    {
+      "claim": "Uranium-235 is a commonly used fuel in nuclear reactors.",
+      "status": "verified",
+      "confidence_score": 84,
+      "correction": null,
+      "explanation": "Based on 5 sources",
+      "key_facts": [
+        "Uranium-235 is an isotope of uranium making up about 0.72% of natural uranium.",
+        "Uranium-235 has a half-life of 704 million years."
+      ],
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Uranium-235",
+          "title": "Uranium-235 - Wikipedia",
+          "domain": "en.wikipedia.org",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://www.cdc.gov/radiation-emergencies/hcp/isotopes/uranium-235-238.html",
+          "title": "Uranium-235 (U-235) and Uranium-238 (U-238) | Radiation Emergencies | CDC",
+          "domain": "cdc.gov",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://energyeducation.ca/encyclopedia/Nuclear_fuel",
+          "title": "Nuclear fuel - Energy Education",
+          "domain": "energyeducation.ca",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://science.howstuffworks.com/innovation/science-questions/why-is-uranium-235-ideal-for-nuclear-power.htm",
+          "title": "Why is Uranium-235 ideal for nuclear power? | HowStuffWorks",
+          "domain": "science.howstuffworks.com",
+          "credibility": "Unverified Source",
+          "score": 30
+        },
+        {
+          "url": "https://www.world-nuclear.org/information-library/nuclear-fuel-cycle/introduction/what-is-uranium-how-does-it-work",
+          "title": "What is Uranium? How Does it Work? - World Nuclear Association",
+          "domain": "world-nuclear.org",
+          "credibility": "Unverified Source",
+          "score": 30
+        }
+      ],
+      "sources_checked": 5,
+      "avg_source_credibility": 72.0,
+      "processing_time": 14.88
+    },
+    {
+      "claim": "Nuclear energy produces zero radioactive waste.",
+      "status": "false",
+      "confidence_score": 73,
+      "correction": "Nuclear energy does produce radioactive waste, but its management is a significant challenge.",
+      "explanation": "Based on 5 sources",
+      "key_facts": [
+        "While significant progress has been made in reducing the volume of final radioactive waste...",
+        "nuclear waste is often perceived as immediately lethal, but exposure risks are managed with proper safety protocols."
+      ],
+      "sources": [
+        {
+          "url": "https://www.nature.com/articles/s41598-024-55911-y",
+          "title": "Long-term, sustainable solutions to radioactive waste management | Scientific Re",
+          "domain": "nature.com",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://research.gatech.edu/feature/nuclear-waste",
+          "title": "Nuclear Waste: What It Is — and What It Isn’t | Research",
+          "domain": "research.gatech.edu",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://www.iaea.org/bulletin/shrinking-nuclear-waste-and-increasing-efficiency-for-a-sustainable-energy-future",
+          "title": "Shrinking nuclear waste and increasing efficiency for a sustainable energy futur",
+          "domain": "iaea.org",
+          "credibility": "Unverified Source",
+          "score": 30
+        },
+        {
+          "url": "https://www.world-nuclear.org/information-library/nuclear-fuel-cycle/nuclear-waste/radioactive-wastes-myths-and-realities",
+          "title": "Radioactive Waste – Myths and Realities - World Nuclear Association",
+          "domain": "world-nuclear.org",
+          "credibility": "Unverified Source",
+          "score": 30
+        },
+        {
+          "url": "https://earth.org/nuclear-waste-recycling-realistic-pursuit-or-delusion/",
+          "title": "Nuclear Waste Recycling: Realistic Pursuit or Delusion? | Earth.Org",
+          "domain": "earth.org",
+          "credibility": "Unverified Source",
+          "score": 30
+        }
+      ],
+      "sources_checked": 5,
+      "avg_source_credibility": 58.0,
+      "processing_time": 15.03
+    },
+    {
+      "claim": "The Roman Empire fell in 476 CE.",
+      "status": "verified",
+      "confidence_score": 75,
+      "correction": null,
+      "explanation": "Based on 6 sources",
+      "key_facts": [
+        "The fall of the Western Roman Empire occurred in 476 CE",
+        "the deposition of the last emperor, Romulus Augustulus, marked not just the fall of Rome but the end of ancient civilization as it was known"
+      ],
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Fall_of_the_Western_Roman_Empire",
+          "title": "Fall of the Western Roman Empire - Wikipedia",
+          "domain": "en.wikipedia.org",
+          "credibility": "Highly Authoritative",
+          "score": 100
+        },
+        {
+          "url": "https://www.worldhistory.org/article/835/fall-of-the-western-roman-empire/",
+          "title": "Fall of the Western Roman Empire - World History Encyclopedia",
+          "domain": "worldhistory.org",
+          "credibility": "Unverified Source",
+          "score": 30
+        },
+        {
+          "url": "https://www.thoughtco.com/what-was-the-fall-of-rome-112688",
+          "title": "The Fall of Rome: How, When, and Why Did It Happen?",
+          "domain": "thoughtco.com",
+          "credibility": "Unverified Source",
+          "score": 30
+        },
+        {
+          "url": "https://historycollection.com/476-ad-the-fall-of-rome-and-the-birth-of-the-dark-ages/",
+          "title": "476 AD: The Fall of Rome and the Birth of the Dark Ages",
+          "domain": "historycollection.com",
+          "credibility": "Unverified Source",
+          "score": 30
+        },
+        {
+          "url": "https://historycooperative.org/the-fall-of-rome-last-days-of-empire/",
+          "title": "The Fall of Rome: When, Why, and How Did Rome Fall? | History Cooperative",
+          "domain": "historycooperative.org",
+          "credibility": "Unverified Source",
+          "score": 30
+        }
+      ],
+      "sources_checked": 6,
+      "avg_source_credibility": 41.7,
+      "processing_time": 8.36
+    },
+    {
+      "claim": "It is sometimes incorrectly asserted that the Roman Empire completely ceased to exist at that point.",
+      "status": "ambiguous",
+      "confidence_score": 0,
+      "correction": null,
+      "explanation": "Contains vague terms: sometimes. Cannot verify.",
+      "ambiguous_words": [
+        "sometimes"
+      ],
+      "sources": [],
+      "key_facts": [],
+      "processing_time": 0.0
+    },
+    {
+      "claim": "Despite the continued existence of the Eastern Roman Empire for nearly a thousand years afterward.",
+      "status": "ambiguous",
+      "confidence_score": 0,
+      "correction": null,
+      "explanation": "Contains vague terms: nearly. Cannot verify.",
+      "ambiguous_words": [
+        "nearly"
+      ],
+      "sources": [],
+      "key_facts": [],
+      "processing_time": 0.0
+    }
+  ]
+}

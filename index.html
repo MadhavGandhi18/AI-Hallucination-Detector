@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hallucination Detector | AI Truth Validator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-brain"></i>
+                    <div class="pulse-ring"></div>
+                </div>
+                <span class="logo-text">Hallucination<span class="highlight">Detector</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#detector">Detector</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <button class="nav-cta">
+                <span>Get Started</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>AI-Powered Truth Detection</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="line">Detect AI</span>
+                <span class="line gradient-text">Hallucinations</span>
+                <span class="line">Instantly</span>
+            </h1>
+            <p class="hero-subtitle">
+                Advanced neural analysis to identify false information, fabricated facts, 
+                and AI-generated hallucinations in any text or document.
+            </p>
+            <div class="hero-cta">
+                <a href="#detector" class="btn btn-primary">
+                    <span>Try Detector</span>
+                    <i class="fas fa-magic"></i>
+                </a>
+                <a href="#how-it-works" class="btn btn-secondary">
+                    <span>Learn More</span>
+                    <i class="fas fa-play"></i>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="99.2">0</span>
+                    <span class="stat-label">Accuracy Rate %</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="1.5">0</span>
+                    <span class="stat-label">M+ Docs Analyzed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="50">0</span>
+                    <span class="stat-label">Languages Supported</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="scanner-container">
+                <div class="scanner">
+                    <div class="scanner-line"></div>
+                    <div class="scanner-content">
+                        <div class="doc-preview">
+                            <div class="doc-line true"></div>
+                            <div class="doc-line true"></div>
+                            <div class="doc-line false"></div>
+                            <div class="doc-line true"></div>
+                            <div class="doc-line uncertain"></div>
+                            <div class="doc-line true"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scanner-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detector Section -->
+    <section class="detector-section" id="detector">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i class="fas fa-search"></i>
+                    Detector
+                </span>
+                <h2 class="section-title">Analyze Your Content</h2>
+                <p class="section-desc">Upload a PDF or paste your text to detect potential hallucinations and inaccuracies</p>
+            </div>
+
+            <div class="detector-card">
+                <div class="input-tabs">
+                    <button class="tab-btn active" data-tab="text">
+                        <i class="fas fa-keyboard"></i>
+                        <span>Text Input</span>
+                    </button>
+                    <button class="tab-btn" data-tab="pdf">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>PDF Upload</span>
+                    </button>
+                </div>
+
+                <div class="input-container">
+                    <!-- Text Input Tab -->
+                    <div class="tab-content active" id="text-tab">
+                        <div class="text-input-wrapper">
+                            <textarea 
+                                id="textInput" 
+                                placeholder="Paste your text here to analyze for hallucinations..."
+                                rows="10"
+                            ></textarea>
+                            <div class="input-footer">
+                                <span class="char-count"><span id="charCount">0</span> characters</span>
+                                <button class="clear-btn" id="clearText">
+                                    <i class="fas fa-times"></i>
+                                    Clear
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PDF Upload Tab -->
+                    <div class="tab-content" id="pdf-tab">
+                        <div class="upload-zone" id="uploadZone">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <div class="upload-pulse"></div>
+                            </div>
+                            <h3>Drag & Drop your PDF here</h3>
+                            <p>or click to browse files</p>
+                            <input type="file" id="pdfInput" accept=".pdf" hidden>
+                            <div class="file-info" id="fileInfo">
+                                <i class="fas fa-file-pdf"></i>
+                                <span class="file-name"></span>
+                                <button class="remove-file" id="removeFile">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="analyze-btn" id="analyzeBtn">
+                    <div class="btn-content">
+                        <i class="fas fa-microscope"></i>
+                        <span>Analyze for Hallucinations</span>
+                    </div>
+                    <div class="btn-loader">
+                        <div class="loader-spinner"></div>
+                        <span>Analyzing...</span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection">
+                <div class="results-header">
+                    <h3>
+                        <i class="fas fa-chart-pie"></i>
+                        Analysis Results
+                    </h3>
+                    <button class="export-btn" id="exportBtn">
+                        <i class="fas fa-download"></i>
+                        Export Report
+                    </button>
+                </div>
+
+                <div class="results-overview">
+                    <div class="score-card">
+                        <div class="score-circle">
+                            <svg viewBox="0 0 100 100">
+                                <circle class="score-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="score-progress" cx="50" cy="50" r="45" id="scoreProgress"></circle>
+                            </svg>
+                            <div class="score-value">
+                                <span id="scoreNumber">0</span>
+                                <span class="score-label">Trust Score</span>
+                            </div>
+                        </div>
+                        <div class="score-legend">
+                            <div class="legend-item verified">
+                                <span class="dot"></span>
+                                <span>Verified Facts</span>
+                                <span class="count" id="verifiedCount">0</span>
+                            </div>
+                            <div class="legend-item hallucination">
+                                <span class="dot"></span>
+                                <span>Hallucinations</span>
+                                <span class="count" id="hallucinationCount">0</span>
+                            </div>
+                            <div class="legend-item uncertain">
+                                <span class="dot"></span>
+                                <span>Uncertain</span>
+                                <span class="count" id="uncertainCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-icon confidence">
+                                <i class="fas fa-shield-check"></i>
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value" id="confidenceScore">0%</span>
+                                <span class="metric-label">Confidence</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon sources">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value" id="sourcesChecked">0</span>
+                                <span class="metric-label">Sources Checked</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon claims">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value" id="claimsFound">0</span>
+                                <span class="metric-label">Claims Analyzed</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon time">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value" id="analysisTime">0s</span>
+                                <span class="metric-label">Analysis Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detailed-results">
+                    <h4>
+                        <i class="fas fa-list-alt"></i>
+                        Detailed Findings
+                    </h4>
+                    <div class="findings-list" id="findingsList">
+                        <!-- Findings will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i class="fas fa-cogs"></i>
+                    Process
+                </span>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-desc">Our advanced AI analyzes content through multiple verification layers</p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3>Input Content</h3>
+                    <p>Upload your PDF document or paste text directly into the analyzer</p>
+                </div>
+                <div class="process-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Analysis</h3>
+                    <p>Neural networks extract claims and cross-reference with verified databases</p>
+                </div>
+                <div class="process-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3>Verification</h3>
+                    <p>Each claim is verified against trusted sources and fact databases</p>
+                </div>
+                <div class="process-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Results</h3>
+                    <p>Receive detailed report with trust scores and highlighted hallucinations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">
+                    <i class="fas fa-star"></i>
+                    Features
+                </span>
+                <h2 class="section-title">Why Choose Us</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Analyze thousands of words in seconds with our optimized processing engine</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Privacy First</h3>
+                    <p>Your data is encrypted and never stored. Complete confidentiality guaranteed</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Multi-Language</h3>
+                    <p>Support for 50+ languages with context-aware analysis</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Vast Knowledge</h3>
+                    <p>Cross-referenced with millions of verified facts and trusted sources</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Detailed Reports</h3>
+                    <p>Comprehensive breakdown of every claim with confidence levels</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Real-Time Updates</h3>
+                    <p>Continuously updated models trained on latest information</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-tag">
+                        <i class="fas fa-info-circle"></i>
+                        About
+                    </span>
+                    <h2>Fighting Misinformation with AI</h2>
+                    <p>
+                        In an era where AI-generated content is becoming increasingly prevalent, 
+                        distinguishing fact from fiction has never been more critical. Our Hallucination 
+                        Detector uses cutting-edge neural networks trained on verified information to 
+                        identify potential inaccuracies in any text.
+                    </p>
+                    <p>
+                        Whether you're a journalist verifying sources, a researcher checking citations, 
+                        or simply someone who wants to ensure the information you're reading is accurate, 
+                        our tool provides the insights you need to make informed decisions.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Trusted by 10,000+ professionals</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>99.2% accuracy rate</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Enterprise-grade security</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="tech-stack">
+                        <div class="tech-node central">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="tech-node node-1">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="tech-node node-2">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="tech-node node-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="tech-node node-4">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="connection-lines"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <span class="logo-text">Hallucination<span class="highlight">Detector</span></span>
+                    </div>
+                    <p>Empowering truth in the age of AI-generated content.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Product</h4>
+                        <a href="#">Features</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">API</a>
+                        <a href="#">Enterprise</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="#">Documentation</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Research</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Press</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HallucinationDetector. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
